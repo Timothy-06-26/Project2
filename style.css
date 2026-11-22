@@ -179,21 +179,107 @@ section {
     font-size: 15px;
 }
 
-
-
-/* SECTION 3 - LOOK CLOSER */
-
-/* PROJECT TIMELINE */
-#projectTimeline {
+/* GitHub activity colours */
+.activity-low {
+    border-color: #a7cdb8;
 
 }
 
-.timelines-item {
+.activity-medium {
+    border-color: #d3acec;
+    
+}
 
+.activity-high {
+    border-color: #f29a88;
+    background-color: #634558;
+    
+}
+
+.selected {
+    border: 3px solid white;
+    
+}
+
+
+/* SECTION 3 - LOOK CLOSER */
+#closer {
+    background-color: #EDE5E9;
+    color: #302b35;
+
+}
+
+.color h2 {
+    color: 432f50;
+    
+}
+
+.closer p {
+    color: #605466;
+    
+}
+
+.projectDetails {
+    background-color: white;
+    padding: 30px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    max-width: 800px;
+    border: 1px solid #DCCDE5;
+    border-radius: 12px;
+    
+}
+
+.project-name {
+    color: #745c86;
+    
+}
+
+.stars {
+    color: #c77d76;
+    font-weight: bold;
+    
+}
+
+/* PROJECT TIMELINE */
+#projectTimeline {
+    max-width: 800px;
+    padding-left: 20px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    border-left: 3px solid #bda3d0;
+}
+
+.timeline-item {
+    background-color: white;
+    color: #302b35;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #DCCDE5;
+    border-radius: 10px;
 }
 
 
 /* SECTION 4 - YOUR OWN PACE */
+#pace {
+    background-color: #f71fef;
+    color: #302b35;
+}
+
+#pace h2 {
+    color: #432f50;
+}
+
+#pace h3 {
+    color: #745C86;
+}
+
+#pace label {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
 
 /* PERSONAL GOAL RESULTS */
 #goal {
@@ -206,32 +292,41 @@ section {
 }
 
 #personalPath {
-
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
 }
 
 .path-step {
-
+    background-color: white;
+    color: #302b35;
+    padding: 20px;
+    border: 1px solid #e2d4e8;
+    border-radius: 10px;
+    border-left: 5px solid #745C86;
+    flex: 1 1 200px;
 }
 
 
 
 /* FINAL MESSAGE */
+
 #pace h2:last-of-type {
     margin-top: 70px;
-    font-size: ;
-    
+    font-size: 42px;
 }
 
-#pace h2: :last-of-type + p {
-    color: ;
-    font-size: ;
-    font-weight: ;
+#pace h2:last-of-type + p {
+    color: #745c86;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 /* FOOTER */
 footer {
-    background-color: ;
-    color: ;
+    background-color: #211C29;
+    color: #EDE5E9;
     text-align: center;
     padding: 30px;
 }
