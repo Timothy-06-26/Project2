@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Everyone's Ahead of Me</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+
+
+
+</head>
+
+
+
+
+<body>
+
+
+<!-- Header & navigation -->
+<header>
+   <h1>Everyone's Ahead of Me</h1>
+   <nav>
+       <ul>
+           <li><a href="#home">Home</a></li>
+           <li><a href="#about">About</a></li>
+           <li><a href="#contact">Contact</a></li>
+       </ul>
+   </nav>
+</header>
+
+
+<main>
+<section id="feeling">
+
+
+<h2>Do you ever feel everyone is moving forward except you?</h2>
+
+
+<p>
+
+
+Everyone seems to be achieving something.
+Getting internships, building projects,
+finding jobs, and reaching their goals.
+
+
+</p>
+
+
+<p>
+
+
+But what about you?
+Are you falling behind or are you just moving at your own pace?
+
+
+</p>
+
+
+<a href="#comparison">
+   <button>Enter the Comparison</button>
+</a>
+
+
+
+
+</section>
+
+
+<!---2. the comparison trap-->
+
+
+
+
+<section id="comparison">
+   <h2>The Comparison Trap</h2>
+   <p>
+       Every day, people share their achievements and progress online.
+   </p>
+
+
+
+
+<p> Explore real public Github projects and see how their activity compares.</p>
+
+
+<h3>Explore Projects</h3>
+
+
+
+
+<button id="loadProjects">Load Projects</button>
+
+
+<p id="projectStatus" role="status"></p>
+
+
+<div id="projectContainer">
+
+
+</div>
+
+
+<p>Remember, online achievements only show a small part of someone's journey.</p>
+
+
+<a href="#closer">
+   <button>Look Closer
+   </button>
+</a>
+
+
+
+
+</section>
+
+
+<!--3. look closer-->
+
+
+<section id="closer">
+   <h2>Look Closer</h2>
+   <p>
+     Success does not happen overnight, every project has a history of small steps, challenges, and improvements.
+   </p>
+
+
+<h3>Selected Project</h3>
+
+
+<div id="projectDetails">
+
+
+   <h4 id="project-name">
+       Select a project to explore
+   </h4>
+
+
+<p>
+   Stars: <span id="stars">--</span>
+</p>
+
+
+<p>
+   Recent activity and project information will appear here.
+</p>
+
+
+
+
+</div>
+
+
+<h3>Project Timeline</h3>
+
+
+<div id="projectTimeline">
+
+
+</div>
+
+
+<p>Progress is not always consistent. Sometimes people move quickl, and sometimes they need more time.</p>
+
+
+
+
+<a href="#pace">
+   <button>Find Your Pace</button>
+
+
+</a>
+
+
+</section>
+
+
+
+
+<!---4. YOUR OWN PACE -->
+
+
+<section id="pace">
+   <h2>Your Own Pace</h2>
+   <p>
+       Everyone has their own journey and timeline. It's important to focus on your own growth and progress.
+   </p>
+
+
+
+
+<h3>Set Your Personal Goal</h3>
+
+
+<label for="goal">
+   What would you like to achieve?
+</label>
+
+
+<br>
+
+
+<select id="goal">
+
+
+<option value="study">Improve my study grades</option>
+<option value="coding">Improve my coding skills</option>
+<option value="internship">Get an internship</option>
+<option value="project">Start a personal project</option>
+
+
+</select>
+
+
+
+
+<h3>Choose Your Timeline</h3>
+
+
+<label for="timeline">
+   How long do you want to take to achieve this goal?
+</label>
+
+
+<br>
+
+
+<input type="range"
+   id="timeline" name="timeline" min="1" max="12" value="6">
+
+
+   <p>
+       Your timeline: <span id="timelineValue">6</span> months
+
+
+   </p>
+
+
+   <button id="createPath">Create Your Path
+  
+   </button>
+
+
+
+
+   <div id="personalPath">
+   </div>
+
+
+   <h2>Different timelines, Different journeys</h2>
+
+
+<p>
+   Neither is behind.
+</p>
+
+
+<a href="#feeling">
+   <button>Back to the Start</button>
+</a>
+
+
+
+
+</section>
+
+
+
+
+
+
+</main>
+
+
+<footer>
+   <p>Everyone's Ahead of Me</p>
+<p> CCT360 Group Project</p>
+
+
+
+
+</footer>
+
+
+
+
+<script src="script.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+
