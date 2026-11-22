@@ -1,0 +1,165 @@
+/* GENERAL WEBSITE STYLING */
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: ;
+    color: ;
+    line-height: ;
+}
+
+h1, h2, h3, h4 {
+    font-family: Ariel, Arial, Helvetica, sans-serif;
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+p {
+
+}
+
+a {
+
+}
+
+
+/* HEADER AND NAVIGATION */
+header {
+
+}
+
+header h1 {
+
+}
+
+nav ul {
+
+}
+
+nav a {
+
+}
+
+nav a:hover {
+
+}
+
+
+/* BUTTONS */
+
+
+/* GENERAL SECTIONS */
+
+
+
+/* SECTION 1 - THE FEELING */
+
+
+/* SECTION 2 - COMPARISON TRAP */
+
+
+
+/*---- PROJECT CARDS ----*/
+/* JS will add project cards here */
+
+
+/* SECTION 3 - LOOK CLOSER */
+
+/* PROJECT TIMELINE */
+
+/* SECTION 4 - YOUR OWN PACE */
+
+/* PERSONAL GOAL RESULTS */
+
+/* FINAL MESSAGE */
+#pace h2:last-of-type {
+    margin-top: 70px;
+    font-size: ;
+    
+}
+
+#pace h2: :last-of-type + p {
+    color: ;
+    font-size: ;
+    font-weight: ;
+}
+
+/* FOOTER */
+footer {
+    background-color: ;
+    color: ;
+    text-align: center;
+    padding: 30px;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+
+    section{
+        padding: 60px 6%;
+        min-height: auto;
+    }
+
+    #feeling {
+        min-height: 550px;
+    }
+
+    #feeling h2 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 30px;
+
+    }
+
+    #projectContainer {
+        flex-direction: column;
+    }
+
+    .project-card {
+        flex-basis: auto;
+    }
+
+    #personalPath {
+        flex-direction: column;
+
+    }
+
+    .path-step {
+        flex-basis: auto;
+
+    }
+
+    #pace h2:last-of-type {
+        font-size: 32px;
+    }
+}
