@@ -51,5 +51,20 @@ async function loadYouthData() {
     }
 
     countrySelect.disabled = false;
+    yearSlider.disabled = yearlyData.length === 0;
     
+}
+
+//2. Customization of text, bar, and timeline with the API data
+
+function showYear() {
+    const year = Number(yearSlider.value);
+    document.getElementById("yearValue").textContent = year;
+
+    const record = yearlyData.find(function (item) {
+        return Number(item.date) === year;
+    });
+    if (!record) {
+        document.getElementById("rateNumber")
+    }
 }
