@@ -84,101 +84,82 @@ Are you falling behind or are you just moving at your own pace?
 
 
 
-
-<p> Explore real public Github projects and see how their activity compares.</p>
-
-
-<h3>Explore Projects</h3>
-
-
-
-
-<button id="loadProjects">Load Projects</button>
-
-
-<p id="projectStatus" role="status"></p>
-
-
-<div id="projectContainer">
-
-
+<div class="highlight-card">
+   <span class="eyebrow"> THE HIGHLIGHT REEL</span>
+   <p> "Just Landed my dream internship!"</p>
+   <small> An example of the achievement posts we often see.</small>
 </div>
 
+<h3> But what does the bigger picture look like? </h3>
 
-<p>Remember, online achievements only show a small part of someone's journey.</p>
-
-
-<a href="#closer" class="pageButton">
-   Look Closer
-</a>
+<p> Explore real youth unemployment data. A post shows one person's good news; it doesn't tell us what
+   everyone else is experiencing."></data>.</p>
 
 
+<label for="country">Choose a country:</label>
+<select id="country">
+   <option value="CAN">Canada</option>
+   <option value="USA">United States of America</option>
+   <option value="GBR">United Kingdom</option>
+   <option value="AUS">Australia</option>
+</select>
 
+<p id="dataStatus" role="status" aria-live="polite">Loading data...</p>
 
+<div class="stat-card">
+   <h3> Youth unemployment (ages 15-24)</h3>
+   <p class="stat-number" id="rateNumber">--%</p>
+   <p id="statSentence"> Loading the latest availible figures...</p>
+   <div class="bar-fill" id="rateBar"></div>
+</div>
+<div class="bar-scale">
+   <span>0%</span>
+   <span>30%</span>
+   </div>
+</div>
+<p class="data-note"> This percentage is of young people <strong> in the labour force</strong>, not all students or young people.
+The World Bank series uses ILO modelled estimates</p>
+<p class="data-note"> Soucre: <a href="https://data.worldbank.org/indicator/SL.UEM.1524.ZS" target="_blank" rel="nf"> World Bank Open data </a></p>
+<a href="#closer" class="pageButton"> Look Closer</a>
 </section>
 
 
-<!--3. look closer-->
+
+<!-- look closer-->
 
 
 <section id="closer">
    <h2>Look Closer</h2>
    <p>
-     Success does not happen overnight, every project has a history of small steps, challenges, and improvements.
+     One person's achievement is not a picture of everybody's progress.
+      Change the year to see how the wider situation can change over time.
    </p>
 
+<label for="dataYear"> Choose a year: <strong id="yearValue">--</strong></label>
+<input type="range" id="dataYear" min="2015" max="2025" value="2025" disabled>
 
-<h3>Selected Project</h3>
+<div id="dataDetails" class="detail-card"></div>
 
-
-<div id="projectDetails">
-
-
-   <h4 id="project-name">
-       Select a project to explore
-   </h4>
-
-
-<p>
-   Stars: <span id="stars">--</span>
-</p>
-
-
-<p>
-   Recent activity and project information will appear here.
-</p>
-
-
-
-
+<h3 id="dataHeading"> Choose a country and year </h3>
+<p id="detailMessage"> We see public accomplishments, but we rarely see the full journey behind them.</p>
 </div>
 
+<h3> Changes over time </h3>
+<p> These are up to four years leading up to your selected year.</p>
+<div id="dataTimeline" aria-live="polite"></div>
 
-<h3>Project Timeline</h3>
-
-
-<div id="projectTimeline">
-
-
-</div>
+<p> Progress is not always consistent. Sometimes people move quickly, and sometimes they need more time.</p>
+<a href="#pace" class="pageButton"> Find Your Pace </a>
 
 
 <p>Progress is not always consistent. Sometimes people move quickly, and sometimes they need more time.</p>
-
-
-
-
-<a href="#pace" class="pageButton">
-   Find Your Pace
-</a>
-
 
 </section>
 
 
 
 
-<!---4. YOUR OWN PACE -->
+<!---YOUR OWN PACE -->
 
 
 <section id="pace">
