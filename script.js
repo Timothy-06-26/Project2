@@ -128,3 +128,24 @@ const goals = {
     project: ["Choose one small idea", "Make a first verison", "Test, improve and share it"]
     };
 
+Document.getElementById("createPath").addEventListener("click", function() {
+    const goal = document.getElementById("goal").value;
+    const months = Number(timelineSlider.value);
+    const checkpoints = [Math.ceil(months / 3), Math.ceil(months * 2 / 3), months];
+    const personalPath = document.getElementById("personalPath");
+    personalPath.replaceChildren();
+
+    goals[goal].forEach(function (step, index) {
+        const card = document.createElement("div");
+        card.className = "path-step";
+        const heading = document.createElement("h4");
+        heading.textContent = `By month ${checkpoints[index]}`;
+        const description = document.createElement("p");
+        description.textContent = step;
+        card.append(heading, description);
+        personalPath.append(card);
+    });
+
+    document.getElementById("finalMessage").textContent =
+    `You chose ${months} month${months === 1 ? "" : "s"}. Everyone moves at a different pace.`;
+});
