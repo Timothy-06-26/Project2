@@ -75,11 +75,36 @@ function showYear() {
     const countryName = countryNames[countrySelect.value];
     document.getElementById("rateNumber").textContent = rate.toFixed(1) + "%";
     document.getElementById("statSentence").textContent =
-    `In ${year}, an estimated ${rate.toFixed(1)}% of 15-24-year-olds in the labour force in ${Canada} were unemployed.`;
+    `In ${year}, an estimated ${rate.toFixed(1)}% of 15-24-year-olds in the labour force in ${countryName} were unemployed.`;
 
     const bar = document.getElementById("rateBar");
     bar.style.width = rate + "%";
     bar.style.backgroundColor = rate < 10 ? "#745C86" : rate < 20 ? "#C77D76" : "#B45A7B";
-    
 
+    document.getElementById("detailHeading").textContent = `${countryName} in ${year}`;
+    document.getElementById("detailMessage").textContent =
+    "This is a labour-market statistic, not a  score of personal achievement. A friend's success doesn't mean you are behind.";
+
+    //Displaying four years of data
+    const timeline = document.getElementById("dataTimeline");
+    timeline.replaceChildren();
+    yearlyData.filter(function (item) {
+        return Number(item.date) <= year;
+    }).slice(-4).forEach(function (item) {
+        const card = document.createElement("div");
+        card.className = "timeline-item";
+        const title = document.createElement("h4");
+        title.textContent = item.date;
+        const detail = document.createElement("p");
+        detail.textContent = Number(item.value).toFixed(1) + "% youth unemployment";
+        const track = document.createElement("div");
+        track.className = "timeline-track";
+        const miniBar = document.createElement("div")
+        miniBar.className = "timeline-bar";
+        miniBar.style.width = item.value + "%";
+        track.append(miniBar);
+        card.append(title, detail, track);
+        timeline.append(card);
+    });
 }
+
