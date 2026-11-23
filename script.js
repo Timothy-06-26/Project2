@@ -108,3 +108,23 @@ function showYear() {
     });
 }
 
+//Two direct interactions with API display
+
+countrySelect.addEventListener("change", loadYouthData);
+yearSlider.addEventListener("input", showYear);
+loadYouthData();
+
+// "Your Own Pace" interaction
+
+const timelineSlider = document.getElementById("timeline");
+timelineSlider.addEventListener("input", function () {
+    document.getElementById("timelineValue").textContent = timelineSlider.value;
+});
+
+const goals = {
+    study: ["Make a weekly study schedule", "Practise and ask for feedback", "Review your progress and adjust"],
+    coding: ["Learn one coding skill", "Build a small practice project", "Improve and share your project"],
+    internship: ["Update your resume", "Find opportunities and apply", "Practice interviews and follow up"],
+    project: ["Choose one small idea", "Make a first verison", "Test, improve and share it"]
+    };
+
