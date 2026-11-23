@@ -1,8 +1,8 @@
 // Countries that visitors can explore
 const countryNames = {
     CAN: "Canada",
-    USA: "United States of America"
-    GBR: "The United Kingdom"
+    USA: "United States of America",
+    GBR: "The United Kingdom",
     AUS: "Australia"
 };
 
