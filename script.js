@@ -65,6 +65,21 @@ function showYear() {
         return Number(item.date) === year;
     });
     if (!record) {
-        document.getElementById("rateNumber")
+        document.getElementById("rateNumber").textContent = "--%";
+        document.getElementById("rateBar").style.width = "0%";
+        document.getElementById("statSentence").textContent = "Data not available for this year.";
+        return;
     }
+
+    const rate = Number(record.value);
+    const countryName = countryNames[countrySelect.value];
+    document.getElementById("rateNumber").textContent = rate.toFixed(1) + "%";
+    document.getElementById("statSentence").textContent =
+    `In ${year}, an estimated ${rate.toFixed(1)}% of 15-24-year-olds in the labour force in ${Canada} were unemployed.`;
+
+    const bar = document.getElementById("rateBar");
+    bar.style.width = rate + "%";
+    bar.style.backgroundColor = rate < 10 ? "#745C86" : rate < 20 ? "#C77D76" : "#B45A7B";
+    
+
 }
