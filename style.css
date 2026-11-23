@@ -165,7 +165,7 @@ section {
     border-radius: 14px;
     max-width: 750px;
     padding: 28px;
-    margin 20px 0 22px;
+    margin: 20px 0 22px;
 }
 
 .bar-fill, .timeline-bar {
@@ -175,6 +175,92 @@ section {
     transition: width .25s ease,
     background-color .25s ease;
     border-radius: 30px;
+}
+
+/* Highlight Reel Card */
+.highlight-card {
+ background: #53415E;
+ border: 1px solid #715d7a;
+ border-radius: 14px;
+ padding: 25px;
+ margin: 28px 0;
+ max-width: 650px;
+}
+
+.highlight-card .eyebrow{
+    color: #F3B5AE;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.highlight-card p {
+    color: white !important;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+/* Statistics */
+.stat-number{
+    font-size: 56px;
+    font-weight: bold;
+    color: #432f50;
+    margin: 0;
+}
+
+.stat-card p {
+    color: #605466 !important;
+}
+
+.stat-card p.stat-number{
+    color: #432f50 !important;
+}
+
+/*Graph Backgrounds */
+.bar-track, .timeline-track{
+    width: 100%;
+    height: 22px;
+    background: #e0d5e3;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.timeline-track{
+    height: 12px;
+}
+
+.bar-scale{
+    display: flex;
+    justify-content: space-between;
+    color: #605466;
+    font-size: 13px;
+}
+
+/* Country Dropdown */
+#country {
+    padding: 12px;
+    width: 320px;
+    max-width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Year Slider */
+#dataYear {
+    width: 440px;
+    max-width: 100%;
+    accent-color: #745c86;
+}
+
+.detail-card{
+    background: white;
+    color: #302b35;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 24px 0;
+}
+
+#dataTimeline {
+    max-width: 760px;
 }
 
 /* SECTION 3 - LOOK CLOSER */
@@ -313,6 +399,41 @@ footer p {
 }
 
 /* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 60px 6%;
+        min-height: auto;
+   }
+
+   #feeling h2 {
+    font-size: 34px;
+   }
+
+   h2 {
+    font-size: 30px;
+   }
+
+   #personalPath{
+    flex-direction: column;
+   }
+}
+
 @media (max-width: 480px) {
 
     .stat-card{
@@ -324,7 +445,7 @@ footer p {
     }
 
     .highlight-card{
-        padding: 20px
+        padding: 20px;
     }
 }
 

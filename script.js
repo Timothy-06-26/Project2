@@ -83,7 +83,7 @@ function showYear() {
 
     document.getElementById("detailHeading").textContent = `${countryName} in ${year}`;
     document.getElementById("detailMessage").textContent =
-    "This is a labour-market statistic, not a  score of personal achievement. A friend's success doesn't mean you are behind.";
+    "This is a labour-market statistic, not a score of personal achievement. A friend's success doesn't mean you are behind.";
 
     //Displaying four years of data
     const timeline = document.getElementById("dataTimeline");
@@ -101,7 +101,7 @@ function showYear() {
         track.className = "timeline-track";
         const miniBar = document.createElement("div")
         miniBar.className = "timeline-bar";
-        miniBar.style.width = item.value + "%";
+        miniBar.style.width = Math.min((Number(item.value) / 30) * 100, 100) + "%";
         track.append(miniBar);
         card.append(title, detail, track);
         timeline.append(card);
@@ -125,7 +125,7 @@ const goals = {
     study: ["Make a weekly study schedule", "Practise and ask for feedback", "Review your progress and adjust"],
     coding: ["Learn one coding skill", "Build a small practice project", "Improve and share your project"],
     internship: ["Update your resume", "Find opportunities and apply", "Practice interviews and follow up"],
-    project: ["Choose one small idea", "Make a first verison", "Test, improve and share it"]
+    project: ["Choose one small idea", "Make a first version", "Test, improve and share it"]
     };
 
 document.getElementById("createPath").addEventListener("click", function() {
