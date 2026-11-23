@@ -42,6 +42,7 @@ async function loadYouthData() {
         showYear();
         statusText.textContent = "Loaded from World Bank Open Data.";
     } catch (error) {
+        console.error("World Bank API error:", error);
         yearlyData = [];
         document.getElementById("rateNumber").textContent = "--%";
         document.getElementById("rateBar").style.width = "0%";
