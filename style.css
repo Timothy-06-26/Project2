@@ -157,79 +157,25 @@ section {
 
 
 
-/*---- PROJECT CARDS ----*/
-/* JS will add project cards here */
-#loadProjects {
-    background-color: #C77D76;
+/* Data Cards */
+
+.stat-card{
+    background: #f7f1ef;
+    color: #302b35;
+    border-radius: 14px;
+    max-width: 750px;
+    padding: 28px;
+    margin 20px 0 22px;
 }
 
-#projectStatus {
-    color: #F3B5AE;
+.bar-fill, .timeline-bar {
+    width: 0;
+    height: 100%;
+    background: #745C86;
+    transition: width .25s ease,
+    background-color .25s ease;
+    border-radius: 30px;
 }
-
-
-#projectContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 30px;
-    margin-bottom: 35px;}
-
-.project-card {
-    background-color: #53415E;
-    color: #ffffff;
-    padding: 25px;
-    border-radius: 25px;
-    border: 2px solid #715d7a;
-    flex: 1 1 250px; }
-
-
-.project-card h3 {
-    color: #ffffff;
-    margin-top: 0;
-}
-
-.project-card p {
-    color: #e4d9e7;
-    font-size: 15px;
-}
-
-.project-card a {
-    color: #F3B5AE;
-}
-
-.project-card button {
-    background-color: #745C86;
-}
-
-/* GitHub activity colours */
-.activity-low {
-    padding: 20px;
-    border-color: #a7cdb8;
-
-}
-
-.activity-medium {
-    padding: 25px;
-    border-color: #d3acec;
-    
-}
-
-.activity-high {
-    border-color: #f29a88;
-    background-color: #634558;
-    padding: 35px;
-}
-
-.activity-high h3 {
-    font-size: 28px;
-}
-
-.selected {
-    border: 3px solid white;
-    
-}
-
 
 /* SECTION 3 - LOOK CLOSER */
 #closer {
@@ -253,40 +199,6 @@ section {
     font-size: 15px;
 }
 
-#projectDetails {
-    background-color: white;
-    padding: 30px;
-    margin-top: 25px;
-    margin-bottom: 40px;
-    max-width: 800px;
-    border: 1px solid #DCCDE5;
-    border-radius: 12px;
-    
-}
-
-#projectDetails p {
-    color: #605466;
-}
-
-#project-name {
-    color: #745c86;
-    
-}
-
-#stars {
-    color: #c77d76;
-    font-weight: bold;
-    
-}
-
-/* PROJECT TIMELINE */
-#projectTimeline {
-    max-width: 800px;
-    padding-left: 20px;
-    margin-top: 25px;
-    margin-bottom: 30px;
-    border-left: 3px solid #bda3d0;
-}
 
 .timeline-item {
     background-color: white;
@@ -401,63 +313,19 @@ footer p {
 }
 
 /* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
 
-    header {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
+    .stat-card{
+        padding: 20px;
     }
 
-    nav ul {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
-
+    .stat-card .stat-number{
+        font-size: 46px;
     }
 
-    nav a {
-        font-size: 14px;
-    }
-    
-
-    section{
-        padding: 60px 6%;
-        min-height: auto;
-    }
-
-    #feeling {
-        min-height: 550px;
-    }
-
-    #feeling h2 {
-        font-size: 34px;
-    }
-
-    h2 {
-        font-size: 30px;
-
-    }
-
-    #projectContainer {
-        flex-direction: column;
-    }
-
-    .project-card {
-        flex-basis: auto;
-    }
-
-    #personalPath {
-        flex-direction: column;
-
-    }
-
-    .path-step {
-        flex-basis: auto;
-
-    }
-
-    #pace h2:last-of-type {
-        font-size: 32px;
+    .highlight-card{
+        padding: 20px
     }
 }
+
+   
