@@ -14,7 +14,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-    font-family: Ariel, Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h2 {
@@ -91,6 +91,28 @@ button:hover {
     background-color: #C77D76;
 }
 
+.pageButton {
+    display: inline-block;
+    background-color: #745C86;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.pageButton:hover {
+    background-color: #c77d76;
+}
+
+#feeling .pageButton {
+    background-color: #c77d76;
+}
+
+#feeling .pageButton:hover {
+    background-color: #a96360;
+}
+
 /* GENERAL SECTIONS */
 section {
     padding: 90px 10%;
@@ -117,13 +139,6 @@ section {
     color: #D6C9D8;
 }
 
-#feeling button {
-    background-color: #C77D76;
-}
-
-#feeling button:hover {
-    background-color: #A96360;
-}
 
 /* SECTION 2 - COMPARISON TRAP */
 #comparison {
@@ -161,7 +176,7 @@ section {
     margin-bottom: 35px;}
 
 .project-card {
-    background-color: 53415E;
+    background-color: #53415E;
     color: #ffffff;
     padding: 25px;
     border-radius: 25px;
@@ -179,13 +194,23 @@ section {
     font-size: 15px;
 }
 
+.project-card a {
+    color: #F3B5AE;
+}
+
+.project-card button {
+    background-color: #745C86;
+}
+
 /* GitHub activity colours */
 .activity-low {
+    padding: 20px;
     border-color: #a7cdb8;
 
 }
 
 .activity-medium {
+    padding: 25px;
     border-color: #d3acec;
     
 }
@@ -193,7 +218,11 @@ section {
 .activity-high {
     border-color: #f29a88;
     background-color: #634558;
-    
+    padding: 35px;
+}
+
+.activity-high h3 {
+    font-size: 28px;
 }
 
 .selected {
@@ -209,17 +238,22 @@ section {
 
 }
 
-.color h2 {
-    color: 432f50;
+#closer h2 {
+    color: #432f50;
     
 }
 
-.closer p {
+#closer p {
     color: #605466;
     
 }
 
-.projectDetails {
+.timeline-item p {
+    color: #605466;
+    font-size: 15px;
+}
+
+#projectDetails {
     background-color: white;
     padding: 30px;
     margin-top: 25px;
@@ -230,12 +264,16 @@ section {
     
 }
 
-.project-name {
+#projectDetails p {
+    color: #605466;
+}
+
+#project-name {
     color: #745c86;
     
 }
 
-.stars {
+#stars {
     color: #c77d76;
     font-weight: bold;
     
@@ -262,7 +300,7 @@ section {
 
 /* SECTION 4 - YOUR OWN PACE */
 #pace {
-    background-color: #f71fef;
+    background-color: #f7f1ef;
     color: #302b35;
 }
 
@@ -283,12 +321,38 @@ section {
 
 /* PERSONAL GOAL RESULTS */
 #goal {
+    padding: 12px;
+    width: 350px;
+    max-width: 100%;
+    background-color: white;
+    color: #302b35;
+    border: 1px solid #bfaacd;
+    border-radius: 8px;
+    font-size: 16px;
 
 }
 
 #timeline {
+    width: 350px;
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    accent-color: #745c86;
 
+}
 
+#timelineValue {
+    color: #745C86;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#createPath {
+    background-color: #c77d76;
+}
+
+#createPath:hover {
+    background-color: #A96360;
 }
 
 #personalPath {
@@ -317,7 +381,7 @@ section {
     font-size: 42px;
 }
 
-#pace h2:last-of-type + p {
+#finalMessage {
     color: #745c86;
     font-size: 24px;
     font-weight: bold;
@@ -348,8 +412,14 @@ footer p {
     nav ul {
         justify-content: center;
         flex-wrap: wrap;
+        gap: 15px;
 
     }
+
+    nav a {
+        font-size: 14px;
+    }
+    
 
     section{
         padding: 60px 6%;
