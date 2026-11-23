@@ -13,13 +13,13 @@ let yearlyData = [];
 
 //World Bank API
 async function loadYouthData() {
-    const country = countrySelect.ariaValueMax;
+    const country = countrySelect.value;
     statusText.textContent = "Loading real data...";
     countrySelect.disabled = true;
     yearSlider.disabled = true;
 
     try {
-        const url = `https://api.worldbank.org/v2/country/CAN/indicator/SL.UEM.1524.ZS?format=json&per_page=100`;
+        const url = `https://api.worldbank.org/v2/country/${country}/indicator/SL.UEM.1524.ZS?format=json&per_page=100`;
         const response = await fetch(url);
         if (!response.ok) throw new Error("API unavailable");
 
@@ -78,7 +78,7 @@ function showYear() {
     `In ${year}, an estimated ${rate.toFixed(1)}% of 15-24-year-olds in the labour force in ${countryName} were unemployed.`;
 
     const bar = document.getElementById("rateBar");
-    bar.style.width = rate + "%";
+    bar.style.width = Math.min((rate / 30) * 100, 100) + "%";
     bar.style.backgroundColor = rate < 10 ? "#745C86" : rate < 20 ? "#C77D76" : "#B45A7B";
 
     document.getElementById("detailHeading").textContent = `${countryName} in ${year}`;
@@ -128,7 +128,7 @@ const goals = {
     project: ["Choose one small idea", "Make a first verison", "Test, improve and share it"]
     };
 
-Document.getElementById("createPath").addEventListener("click", function() {
+document.getElementById("createPath").addEventListener("click", function() {
     const goal = document.getElementById("goal").value;
     const months = Number(timelineSlider.value);
     const checkpoints = [Math.ceil(months / 3), Math.ceil(months * 2 / 3), months];
